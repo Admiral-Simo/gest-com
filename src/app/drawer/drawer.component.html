@@ -1,0 +1,30 @@
+<div class="drawer">
+  <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-side">
+    <label
+      for="my-drawer"
+      aria-label="close sidebar"
+      class="drawer-overlay"
+    ></label>
+    <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+      <label for="my-drawer" class="btn btn-primary drawer-button"
+        >Open drawer</label
+      >
+      <!-- Sidebar content here -->
+      <li>
+        <a routerLink="/buying" routerLinkActive="active" class="link"
+          >Go to buying</a
+        >
+        <a routerLink="/selling" routerLinkActive="active" class="link"
+          >Go to selling</a
+        >
+        <a routerLink="/regulation" routerLinkActive="active" class="link"
+          >Go to regulation</a
+        >
+        <a routerLink="/stock" routerLinkActive="active" class="link"
+          >Go to stock</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>

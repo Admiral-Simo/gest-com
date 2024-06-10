@@ -30,11 +30,13 @@ export class SellingComponent {
       FavColor: this.favColor,
     };
 
-    this.data.push(newItem);
+    if (this.data && this.name && this.favColor) {
+      this.data.push(newItem);
 
-    this.job = '';
-    this.name = '';
-    this.favColor = '';
+      this.job = '';
+      this.name = '';
+      this.favColor = '';
+    }
   }
 }
 

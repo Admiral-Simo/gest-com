@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,5 +9,12 @@ import { RouterLink } from '@angular/router';
   styleUrl: './drawer.component.css',
 })
 export class DrawerComponent {
+  @ViewChild('drawerCheckbox') drawerCheckbox!: ElementRef<HTMLInputElement>;
   routes: string[] = ['buying', 'selling', 'stock', 'regulation', 'sdlkfj'];
+
+  closeDrawer() {
+    if (this.drawerCheckbox) {
+      this.drawerCheckbox.nativeElement.click();
+    }
+  }
 }

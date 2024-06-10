@@ -1,5 +1,5 @@
 <div class="drawer">
-  <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+  <input #drawerCheckbox id="my-drawer" type="checkbox" class="drawer-toggle" />
   <div class="drawer-side">
     <label
       for="my-drawer"
@@ -8,20 +8,36 @@
     ></label>
     <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
       <label for="my-drawer" class="btn btn-primary drawer-button"
-        >Open drawer</label
+        >Close drawer</label
       >
       <!-- Sidebar content here -->
       <li>
-        <a routerLink="/buying" routerLinkActive="active" class="link"
+        <a
+          (click)="closeDrawer()"
+          routerLink="/buying"
+          routerLinkActive="active"
+          class="link"
           >Go to buying</a
         >
-        <a routerLink="/selling" routerLinkActive="active" class="link"
+        <a
+          (click)="closeDrawer()"
+          routerLink="/selling"
+          routerLinkActive="active"
+          class="link"
           >Go to selling</a
         >
-        <a routerLink="/regulation" routerLinkActive="active" class="link"
+        <a
+          (click)="closeDrawer()"
+          routerLink="/regulation"
+          routerLinkActive="active"
+          class="link"
           >Go to regulation</a
         >
-        <a routerLink="/stock" routerLinkActive="active" class="link"
+        <a
+          (click)="closeDrawer()"
+          routerLink="/stock"
+          routerLinkActive="active"
+          class="link"
           >Go to stock</a
         >
       </li>

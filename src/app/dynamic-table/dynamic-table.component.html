@@ -1,0 +1,22 @@
+<table class="table">
+  <!-- head -->
+  <thead>
+    <tr>
+      <th></th>
+      <th>Job</th>
+      <th>Name</th>
+      <th>Favorite Color</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let item of data; let i = index"
+      [class.bg-base-200]="i % 2 === 0"
+    >
+      <th>{{ i + 1 }}</th>
+      <td>{{ item.Job.toLowerCase() }}</td>
+      <td>{{ item.Name.toLowerCase() }}</td>
+      <td>{{ item.FavColor.toLowerCase() }}</td>
+    </tr>
+  </tbody>
+</table>

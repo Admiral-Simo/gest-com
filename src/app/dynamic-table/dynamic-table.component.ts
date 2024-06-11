@@ -9,11 +9,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './dynamic-table.component.css',
 })
 export class DynamicTableComponent {
-  @Input() data: SellingInterface[] = [];
+  @Input() columns: any[] = [];
+  @Input() data: any[] = [];
 }
-
-type SellingInterface = {
-  Job: string;
-  Name: string;
-  FavColor: string;
-};

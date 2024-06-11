@@ -11,6 +11,7 @@ import { DynamicTableComponent } from '../dynamic-table/dynamic-table.component'
 })
 export class SellingComponent {
   data: SellingInterface[];
+  columns: ColumnDefinition;
 
   job: string = '';
   name: string = '';
@@ -18,18 +19,24 @@ export class SellingComponent {
 
   constructor() {
     this.data = [
-      { Job: 'Job 1', Name: 'Name 1', FavColor: 'Color 1' },
-      { Job: 'Job 2', Name: 'Name 2', FavColor: 'Color 2' },
-      { Job: 'Job 3', Name: 'Name 3', FavColor: 'Color 3' },
+      ['Data Scientist', 'Jawad', 'Red'],
+      ['Developer', 'Toufik', 'Blue'],
+      ['DevOps', 'Soukayna', 'Green'],
+      ['Data Scientist', 'Jawad', 'Red'],
+      ['Developer', 'Toufik', 'Blue'],
+      ['DevOps', 'Soukayna', 'Green'],
+      ['Data Scientist', 'Jawad', 'Red'],
+      ['Developer', 'Toufik', 'Blue'],
+      ['DevOps', 'Soukayna', 'Green'],
+      ['Data Scientist', 'Jawad', 'Red'],
+      ['Developer', 'Toufik', 'Blue'],
+      ['DevOps', 'Soukayna', 'Green'],
     ];
+    this.columns = ['Job', 'Name', 'Favorite Color'];
   }
 
   addItem() {
-    let newItem: SellingInterface = {
-      Job: this.job,
-      Name: this.name,
-      FavColor: this.favColor,
-    };
+    let newItem: SellingInterface = [this.job, this.name, this.favColor];
 
     if (this.data && this.name && this.favColor) {
       this.data.push(newItem);
@@ -41,8 +48,6 @@ export class SellingComponent {
   }
 }
 
-type SellingInterface = {
-  Job: string;
-  Name: string;
-  FavColor: string;
-};
+type SellingInterface = [string, string, string];
+
+type ColumnDefinition = [string, string, string];

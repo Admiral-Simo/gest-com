@@ -1,22 +1,16 @@
-<table class="table">
+<table class="table max-w-screen-xl mx-auto">
   <!-- head -->
   <thead>
     <tr>
-      <th></th>
-      <th>Job</th>
-      <th>Name</th>
-      <th>Favorite Color</th>
+      <th *ngFor="let column of columns">{{ column }}</th>
     </tr>
   </thead>
   <tbody>
     <tr
-      *ngFor="let item of data; let i = index"
+      *ngFor="let row of data; let i = index"
       [class.bg-base-200]="i % 2 === 0"
     >
-      <th>{{ i + 1 }}</th>
-      <td>{{ item.Job.toLowerCase() }}</td>
-      <td>{{ item.Name.toLowerCase() }}</td>
-      <td>{{ item.FavColor.toLowerCase() }}</td>
+      <td *ngFor="let column of columns; let i = index">{{ row[i] }}</td>
     </tr>
   </tbody>
 </table>

@@ -41,6 +41,8 @@ export class SellingComponent {
     if (this.data && this.name && this.favColor) {
       this.data.push(newItem);
 
+      alert('successfuly added.');
+
       this.job = '';
       this.name = '';
       this.favColor = '';

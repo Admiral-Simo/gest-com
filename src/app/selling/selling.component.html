@@ -1,40 +1,42 @@
 <!-- selling.component.html -->
 
 <div class="overflow-x-auto">
-  <form #formData="ngForm" (ngSubmit)="addItem()">
-    <div class="flex items-center justify-around">
-      <label class="input input-bordered flex items-center gap-2">
-        <input
-          type="text"
-          class="grow"
-          placeholder="Enter Job"
-          name="job"
-          [(ngModel)]="job"
-          required
-        />
-      </label>
-      <label class="input input-bordered flex items-center gap-2">
-        <input
-          type="text"
-          class="grow"
-          placeholder="Enter Name"
-          name="name"
-          [(ngModel)]="name"
-          required
-        />
-      </label>
-      <label class="input input-bordered flex items-center gap-2">
-        <input
-          type="text"
-          class="grow"
-          placeholder="Enter Favorite Color"
-          name="favColor"
-          [(ngModel)]="favColor"
-          required
-        />
-      </label>
-      <button type="submit" class="btn btn-secondary">Add</button>
-    </div>
+  <form
+    #formData="ngForm"
+    (ngSubmit)="addItem()"
+    class="mx-auto my-2 max-w-3xl space-y-2"
+  >
+    <label class="input input-bordered flex items-center gap-2">
+      <input
+        type="text"
+        class="grow"
+        placeholder="Enter Job"
+        name="job"
+        [(ngModel)]="job"
+        required
+      />
+    </label>
+    <label class="input input-bordered flex items-center gap-2">
+      <input
+        type="text"
+        class="grow"
+        placeholder="Enter Name"
+        name="name"
+        [(ngModel)]="name"
+        required
+      />
+    </label>
+    <label class="input input-bordered flex items-center gap-2">
+      <input
+        type="text"
+        class="grow"
+        placeholder="Enter Favorite Color"
+        name="favColor"
+        [(ngModel)]="favColor"
+        required
+      />
+    </label>
+    <button type="submit" class="btn btn-secondary">Add</button>
   </form>
 
   <app-dynamic-table [data]="data" [columns]="columns"></app-dynamic-table>
